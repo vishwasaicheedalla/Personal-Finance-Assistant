@@ -3,14 +3,6 @@ import dotenv from 'dotenv'; // Import dotenv here as well
 
 dotenv.config();
 
-// --- START DEBUGGING BLOCK ---
-// This will print the environment variables to your terminal when the server starts.
-console.log("--- CLERK ENVIRONMENT VARIABLES ---");
-console.log("CLERK_SECRET_KEY:", process.env.CLERK_SECRET_KEY ? "Loaded" : "MISSING or empty");
-console.log("CLERK_JWT_KEY:", process.env.CLERK_JWT_KEY ? "Loaded" : "MISSING or empty");
-console.log("---------------------------------");
-// --- END DEBUGGING BLOCK ---
-
 const clerk = new Clerk({ secretKey: process.env.CLERK_SECRET_KEY });
 
 export const clerkAuth = async (req, res, next) => {
