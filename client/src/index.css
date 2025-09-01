@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import "tailwindcss";
+
+/* Custom component styles */
+@layer components {
+  /* Style for the glowing green effect (for income) */
+  .glow-green {
+    text-shadow: 0 0 8px rgba(74, 222, 128, 0.7), 0 0 20px rgba(74, 222, 128, 0.5);
+  }
+
+  /* Style for the glowing red effect (for expenses) */
+  .glow-red {
+    text-shadow: 0 0 8px rgba(248, 113, 113, 0.7), 0 0 20px rgba(248, 113, 113, 0.5);
+  }
+}
+
+/* Custom scrollbar for a more polished look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937; /* A slightly lighter dark color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563; /* A medium gray */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280; /* A lighter gray on hover */
+}
