@@ -18,6 +18,7 @@ app.use(cors());
 app.use(express.json());
 
 // API Routes
+app.get('/', (req, res)=> res.send('Server is Live!'))
 app.use('/api/transactions', transactionRoutes);
 app.use('/api/ocr', ocrRoutes);
 
